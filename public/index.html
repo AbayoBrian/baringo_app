@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMS Baringo CIDU</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        h1 { color: #fff; margin-bottom: 20px; }
+        p { margin-bottom: 30px; font-size: 18px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #45a049; }
+        .status { 
+            background: rgba(76, 175, 80, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 IMS Baringo CIDU</h1>
+        <p>Irrigation Management System - Baringo County</p>
+        
+        <div class="status">
+            <h3>✅ Application Deployed Successfully!</h3>
+            <p>Your PHP application is now running on Vercel</p>
+        </div>
+        
+        <a href="/api/test" class="btn">Test API</a>
+        <a href="/login" class="btn">Login</a>
+        
+        <p><small>Powered by Vercel + PHP</small></p>
+    </div>
+</body>
+</html>
