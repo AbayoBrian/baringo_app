@@ -1,0 +1,72 @@
+# Render Configuration for IMS Baringo CIDU
+# This file configures your PHP application for Render deployment
+
+services:
+  - type: web
+    name: ims-baringo-cidu
+    env: php
+    plan: free
+    buildCommand: |
+      # Install PHP dependencies (if using Composer)
+      # composer install --no-dev --optimize-autoloader
+      
+      # Set up upload directories
+      mkdir -p assets/uploads/documents
+      mkdir -p assets/uploads/photos
+      mkdir -p assets/uploads/attendance
+      
+      # Set permissions
+      chmod 755 assets/uploads
+      chmod 755 assets/uploads/documents
+      chmod 755 assets/uploads/photos
+      chmod 755 assets/uploads/attendance
+    startCommand: |
+      # Start PHP built-in server (for development)
+      # For production, use Apache/Nginx
+      php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: APP_NAME
+        value: IMS Baringo CIDU
+      - key: APP_URL
+        fromService:
+          type: web
+          name: ims-baringo-cidu
+          property: host
+      - key: APP_DEBUG
+        value: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DB_HOST
+        fromDatabase:
+          type: postgresql
+          name: ims-baringo-db
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          type: postgresql
+          name: ims-baringo-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          type: postgresql
+          name: ims-baringo-db
+          property: user
+      - key: DB_PASS
+        fromDatabase:
+          type: postgresql
+          name: ims-baringo-db
+          property: password
+      - key: AGENT_USERNAME
+        value: Agent
+      - key: AGENT_PASSWORD
+        value: agent@2025!
+      - key: ADMIN_USERNAME
+        value: CiduAdmin
+      - key: ADMIN_PASSWORD
+        value: admin@2025#
+
+databases:
+  - name: ims-baringo-db
+    plan: free
+    databaseName: ims_baringo
+    user: ims_user

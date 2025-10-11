@@ -1,0 +1,11 @@
+{
+  "name": "ims-baringo-cidu",
+  "version": "2.0.0",
+  "description": "IMS Baringo CIDU - Irrigation Management System",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "echo 'No build step required for PHP'"
+  }
+}
