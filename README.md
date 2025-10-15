@@ -154,7 +154,7 @@ This PHP version maintains 100% feature parity with the original Flask applicati
 
 ## Support
 
-For technical support or questions about the conversion, please refer to the original Flask application documentation or contact the development team.
+For technical support contact the developer owinb239@gmail.com/ +254-793-401-572.
 
 ## License
 
