@@ -1,58 +1,4 @@
-# IMS Baringo CIDU - Vercel Deployment Guide
-
-## Prerequisites
-
-1. **GitHub Account**: Your code should be in a GitHub repository
-2. **Vercel Account**: Sign up at [vercel.com](https://vercel.com)
-3. **Database**: You'll need a PostgreSQL database (recommended: Neon, Supabase, or PlanetScale)
-
-## Step 1: Prepare Your Repository
-
-### 1.1 Push to GitHub
-```bash
-git add .
-git commit -m "Prepare for Vercel deployment"
-git push origin main
-```
-
-### 1.2 Verify Required Files
-Make sure these files exist in your repository:
-- `api/index.php` ✅
-- `vercel.json` ✅
-- `.vercelignore` ✅
-- `package.json` ✅
-- `config/database_postgresql.php` ✅
-
-## Step 2: Set Up Database
-
-### Option A: Neon (Recommended - Free PostgreSQL)
-1. Go to [neon.tech](https://neon.tech)
-2. Create a new project
-3. Copy the connection string
-4. Note down: Host, Database, Username, Password, Port
-
-### Option B: Supabase
-1. Go to [supabase.com](https://supabase.com)
-2. Create a new project
-3. Go to Settings > Database
-4. Copy the connection details
-
-### Option C: PlanetScale
-1. Go to [planetscale.com](https://planetscale.com)
-2. Create a new database
-3. Get connection details
-
-## Step 3: Deploy to Vercel
-
-### 3.1 Connect Repository
-1. Go to [vercel.com/dashboard](https://vercel.com/dashboard)
-2. Click "Add New" → "Project"
-3. Import your GitHub repository
-4. Choose "Other" as the framework preset
-
-### 3.2 Configure Environment Variables
-In Vercel dashboard, go to Settings → Environment Variables and add:
-
+# IMS Baringo CIDU - Vercel Deployment
 ```
 APP_KEY=your-generated-app-key
 APP_URL=https://your-app-name.vercel.app
@@ -61,7 +7,7 @@ DB_NAME=your-database-name
 DB_USER=your-database-username
 DB_PASS=your-database-password
 DB_PORT=5432
-DB_TYPE=postgresql
+DB_TYPE=postgresql/MY SQL
 AGENT_USERNAME=Agent
 AGENT_PASSWORD=agent@2025!
 ADMIN_USERNAME=CiduAdmin
