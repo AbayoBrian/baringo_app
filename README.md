@@ -4,7 +4,7 @@ This is the PHP conversion of the Baringo Irrigation Management System (IMS) ori
 
 ## Features
 
-- **Authentication System** - Agent and Admin roles
+- **Authentication System** - Agent/User and Admin roles
 - **Irrigation Scheme Management** - Complete scheme data collection and management
 - **Assessment System** - Field agent assessment forms with file uploads
 - **Attendance Management** - Event attendance tracking and analytics
